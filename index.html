@@ -1,10 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My GitHub Page</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>Hoang Long</title>
+
+  <style>
+    body {
+        background-color: #161b22;
+        color: #c9d1d9;
+        line-height: 1.5;
+    }
+
+    a {
+        color: #0969da;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    a:visited {
+        color: #DA7A09;
+    }
+    .image-box {
+      position: absolute;
+      top: 150px;
+      left: 75px;
+      width: 560px;
+      height: 560px;
+    }
+  
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .text-box {
+        position: absolute;
+        top: 150px;
+        left: 710px;
+        width: 780px;
+        height: 560px;
+        display: table;
+    }
+
+    p {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+    #timezone * {text-decoration: none;}
+  </style>
+
+  <script type="text/javascript">
+    let options = {
+        timeZone: 'Asia/Ho_Chi_Minh',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+    },
+    formatter = new Intl.DateTimeFormat([], options);
+
+    //update second by second
+    setInterval(() => {
+        document.querySelector("#time").innerText = formatter.format(new Date());
+    }, 1000);
+  </script>
 </head>
+
+
 <body>
-  <h1>Welcome to my website!</h1>
-  <p>This is hosted with GitHub Pages.</p>
+  <div class="image-box">
+    <img src="assets/photo/random pic.jpg">
+  </div>
+  
+  <div class="text-box">
+    <p>
+        <font size="7"><i><b>NGUYEN HOANG LONG</b></i></font>
+    <br>
+    <br>
+    <a href="https://ngwndeLong.github.io/about.html">about</a>
+    <br>
+    <a href="https://ngwndeLong.github.io/resume.html">resume</a>
+    <br>
+    <a href="https://ngwndeLong.github.io/contact.html">contact</a>
+    <br><br>
+    <span style="font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace !important;",
+          id="timeZone">
+        <a href="https://24timezones.com/Ho-Chi-Minh/time">time in my region: HO CHI MINH CITY</a> - <span
+            id="time">0:00 PM</span> <a href="https://24timezones.com/time-zone/utc+07">UTC+7</a>
+    </span>
+    <br>
+    <br>
+    </p>
+  </div>
+  <br><br>
 </body>
 </html>
